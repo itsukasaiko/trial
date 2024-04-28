@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="topside"></div>
+
+  <header>
+    <div class="container">
+      <!--body title-->
+      <div class="body_title">
+        <p class="p1">Ebookstore Management - Add</p>
+      </div>
+      <!--end of body title-->
+    </div>
+
+    <!--body navigation/directory-->
+    <div class="directory">
+      <ul>
+        <li class="topbar"><img src="images/team-logo.png" class="logo" alt="logo"></li>
+
+      </ul>
+      <ul>
+        <li><a href="index.html" class="navigation_text">Home</a></li>
+        <li><a href="fiction.html" class="navigation_text">Fiction Book</a></li>
+        <li><a href="nonfiction.html" class="navigation_text">Non-Fiction Book</a></li>
+        <li><a href="add.html" class="navigation_text">Add</a></li>
+      </ul>
+    </div>
+    <!--end of body navigation/directory-->
+  </header>
+
+  <div class="centercontainer_add">
+    <div id="forms">
+      <b>Add New Book</b>
+      <div class="add_form">
+        <form id="addBookForm">
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title"><br>
+
+          <label for="author">Author:</label><br>
+          <input type="text" id="author" name="author"><br>
+
+          <label for="price">Price:</label><br>
+          <input type="text" id="price" name="price"><br>
+
+          <label for="description">Description:</label><br>
+          <textarea id="description" name="description"></textarea><br>
+
+          <label for="format">Format:</label><br>
+          <input type="text" id="format" name="format"><br>
+
+          <label for="publicationDate">Publication Date:</label><br>
+          <input type="text" id="publicationDate" name="publicationDate"><br>
+
+          <label for="isbn">ISBN:</label><br>
+          <input type="text" id="isbn" name="isbn"><br>
+
+          <label for="category">Category:</label><br>
+          <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+          </select>
+          <br>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Handle form submission
+        document.getElementById("addBookForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Handle form submission here, e.g., update the XML file
+          // You can use XMLHttpRequest or fetch API to send data to the server
+
+          // Get form field values
+          var title = document.getElementById("title").value;
+          var author = document.getElementById("author").value;
+          var price = document.getElementById("price").value;
+          var description = document.getElementById("description").value;
+          var format = document.getElementById("format").value;
+          var publicationDate = document.getElementById("publicationDate").value;
+          var isbn = document.getElementById("isbn").value;
+          var category = document.getElementById("category").value;
+
+          // Construct book data
+          var bookInfo = {
+            title: title,
+            author: author,
+            price: price,
+            description: description,
+            format: format,
+            publicationDate: publicationDate,
+            isbn: isbn,
+            category: category
+          };
+
+          // Log updated book data
+          console.log("Updated book data:", bookInfo);
+          console.log("stor:", localStorage);
+
+
+          // Get existing books from local storage
+          var existingBooks = JSON.parse(localStorage.getItem("books")) || [];
+
+          // Add the new book to the existing books
+          existingBooks.push(bookInfo);
+
+          // Save the updated book list to local storage
+          localStorage.setItem("books", JSON.stringify(existingBooks));
+
+          // Redirect to the home page
+          window.location.href = "index.html";
+        });
+      });
+    </script>
+
+
+    <div class="bottom_footer">
+      <p class="copyright_statement">
+        <span class="text_left">
+          ©Copyright LOLOLOL. Students production.
+        </span>
+
+        <span class="text_right">
+          <a href="#topside">
+            TOP
+          </a>
+        </span>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

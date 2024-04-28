@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiction Books</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="topside"></div>
+
+  <header>
+    <div class="container">
+      <!--body title-->
+      <div class="body_title">
+        <p class="p1">Ebookstore Management - Fiction</p>
+      </div>
+      <!--end of body title-->
+    </div>
+
+    <!--body navigation/directory-->
+    <div class="directory">
+      <ul>
+        <li class="topbar"><img src="images/team-logo.png" class="logo" alt="logo"></li>
+
+      </ul>
+      <ul>
+        <li><a href="index.html" class="navigation_text">Home</a></li>
+        <li><a href="fiction.html" class="navigation_text">Fiction Book</a></li>
+        <li><a href="nonfiction.html" class="navigation_text">Non-Fiction Book</a></li>
+        <li><a href="add.html" class="navigation_text">Add</a></li>
+      </ul>
+    </div>
+    <!--end of body navigation/directory-->
+  </header>
+
+
+  <div class="centercontainer_fiction">
+    <div id="fictionBooksContainer"></div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var fictionBooksContainer = document.getElementById("fictionBooksContainer");
+
+        // Load the XML file
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            // Parse the XML data
+            var xmlDoc = this.responseXML;
+            // Get the fiction books
+            var fictionBooks = xmlDoc.querySelectorAll("Fiction book");
+            // Create HTML elements for each fiction book
+            fictionBooks.forEach(function (book) {
+              var title = book.querySelector("title").textContent;
+              var author = book.querySelector("author").textContent;
+              var price = book.querySelector("price").textContent;
+              var description = book.querySelector("description").textContent;
+              var format = book.querySelector("format").textContent;
+              var publicationDate = book.querySelector("publication_date").textContent;
+              var isbn = book.querySelector("isbn").textContent;
+              var category = book.querySelector("category_specific").textContent;
+              var imageSrc = book.querySelector("image_path").textContent;
+
+              // Check if there's updated book data in local storage
+              var updatedBookData = JSON.parse(localStorage.getItem("updatedBookData"));
+              if (updatedBookData && (updatedBookData.title === title || updatedBookData.title === title)) {
+                // Use updated book data if available
+                title = updatedBookData.title
+                author = updatedBookData.author;
+                price = updatedBookData.price;
+                description = updatedBookData.description;
+                format = updatedBookData.format;
+                publicationDate = updatedBookData.publicationDate;
+                isbn = updatedBookData.isbn;
+                category = updatedBookData.category;
+              }
+
+              // Create a card for each fiction book
+              var bookCard = document.createElement("div");
+              bookCard.classList.add("book-card");
+              bookCard.innerHTML = `
+            <h2>${title}</h2>
+            <img class="book-image" src="${imageSrc}" alt="${title}">
+            <p><strong>Author:</strong> ${author}</p>
+            <p><strong>Price:</strong> ${price}</p>
+            <p><strong>Description:</strong> ${description}</p>
+            <p><strong>Format:</strong> ${format}</p>
+            <p><strong>Publication Date:</strong> ${publicationDate}</p>
+            <p><strong>ISBN:</strong> ${isbn}</p>
+            <p><strong>Category:</strong> ${category}</p>
+            <button class="btn" onclick="editBook('${encodeURIComponent(title)}', '${encodeURIComponent(author)}', '${encodeURIComponent(price)}', '${encodeURIComponent(description)}', '${encodeURIComponent(format)}', '${encodeURIComponent(publicationDate)}', '${encodeURIComponent(isbn)}', '${encodeURIComponent(category)}')">Edit</button>
+            <button class="btn remove-btn" onclick="removeBook('${title}')">Remove</button>
+            `;
+              fictionBooksContainer.appendChild(bookCard);
+            });
+          }
+        };
+        xhttp.open("GET", "estore.xml", true);
+        xhttp.send();
+
+        var fictionBooksContainer = document.getElementById("fictionBooksContainer");
+
+        // Fetch books from local storage
+        var storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+
+        // Display each book
+        storedBooks.forEach(function (book) {
+          // Check if all required fields are present
+          if (book.category == "fiction") {
+            var title = book.title;
+            var author = book.author;
+            var price = book.price;
+            var description = book.description;
+            var format = book.format;
+            var publicationDate = book.publicationDate;
+            var isbn = book.isbn;
+            var category = book.category;
+
+            // Check if there's updated book data in local storage
+            var updatedBookData = JSON.parse(localStorage.getItem("updatedBookData"));
+            if (updatedBookData && (updatedBookData.title === title || updatedBookData.title === title)) {
+              // Use updated book data if available
+              title = updatedBookData.title
+              author = updatedBookData.author;
+              price = updatedBookData.price;
+              description = updatedBookData.description;
+              format = updatedBookData.format;
+              publicationDate = updatedBookData.publicationDate;
+              isbn = updatedBookData.isbn;
+              category = updatedBookData.category;
+            }
+
+            // Create HTML elements for the book
+            var bookCard = document.createElement("div");
+            bookCard.classList.add("book-card");
+            bookCard.innerHTML = `
+                <h2>${title}</h2>
+                <p><strong>Author:</strong> ${author}</p>
+                <p><strong>Price:</strong> ${price}</p>
+                <p><strong>Description:</strong> ${description}</p>
+                <p><strong>Format:</strong> ${format}</p>
+                <p><strong>Publication Date:</strong> ${publicationDate}</p>
+                <p><strong>ISBN:</strong> ${isbn}</p>
+                <p><strong>Category:</strong> ${category}</p>
+                <button class="btn" onclick="editBook('${encodeURIComponent(title)}', '${encodeURIComponent(author)}', '${encodeURIComponent(price)}', '${encodeURIComponent(description)}', '${encodeURIComponent(format)}', '${encodeURIComponent(publicationDate)}', '${encodeURIComponent(isbn)}', '${encodeURIComponent(category)}')">Edit</button>
+                <button class="btn remove-btn" onclick="removeBook('${title}')">Remove</button>
+                `;
+            fictionBooksContainer.appendChild(bookCard);
+          }
+        });
+      });
+
+      function editBook(title, author, price, description, format, publicationDate, isbn, category) {
+        var url = `edit.html?title=${title}&author=${author}&price=${price}&description=${description}&format=${format}&publicationDate=${publicationDate}&isbn=${isbn}&category=${category}`;
+        window.location.assign(url);
+      }
+
+      // Function to remove a book
+      function removeBook(title) {
+        // Retrieve the books from local storage
+        var storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+        // Filter out the book to be removed
+        storedBooks = storedBooks.filter(function (book) {
+          return book.title !== title;
+        });
+        // Update the local storage with the new array of books
+        localStorage.setItem("books", JSON.stringify(storedBooks));
+        // Reload the page to reflect the changes
+        location.reload();
+      }
+
+    </script>
+
+    <div class="bottom_footer">
+      <p class="copyright_statement">
+        <span class="text_left">
+          ©Copyright LOLOLOL. Students production.
+        </span>
+
+        <span class="text_right">
+          <a href="#topside">
+            TOP
+          </a>
+        </span>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

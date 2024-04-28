@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ebookstore>
+  <Books>
+    <Non-fiction>
+    <book>
+      <title>Sapiens: A Brief History of Humankind</title>
+      <author>Yuval Noah Harari</author>
+      <price>RM40.99</price>
+      <description>Explores the history of humanity from our origins as hunter-gatherers to the modern world.</description>
+      <format>E-book</format>
+      <publication_date>2011</publication_date>
+      <isbn>9780062067014</isbn>
+      <category_specific>History</category_specific>
+      <image_path>images/sapiens.jpg</image_path>
+    </book>
+    <book>
+      <title>Unplug and Unwind: Mindful Ways to Rest, Relax, and Feel Renewed</title>
+      <author>Cico Books</author>
+      <price>RM29.99</price>
+      <description>Discover how better to meet the stress and demands of daily life with accessible and gratifying ways to decompress and live each day more fully.</description>
+      <format>Hardcover</format>
+      <publication_date>2024</publication_date>
+      <isbn>9781800653061</isbn>
+      <category_specific>Motivation</category_specific>
+      <image_path>images/unplug.jpeg</image_path>
+    </book>
+    <book>
+      <title>Pocket Book of Knitting</title>
+      <author>Claire Gelder</author>
+      <price>RM22.50</price>
+      <description>From best-selling author and crafting queen Claire Gelder, this gorgeous mini guide is packed full of knitting know-how, practical illustrations and comes with four simple projects.</description>
+      <format>Hardcover</format>
+      <publication_date>2023</publication_date>
+      <isbn>9781800920729</isbn>
+      <category_specific>Craft Collection</category_specific>
+      <image_path>images/pocket.jpg</image_path>
+    </book>
+    <book>
+      <title>The Lean Startup</title>
+      <author>Eric Ries</author>
+      <price>RM15.99</price>
+      <description>A guide to developing businesses through rapid experimentation and iterative feedback.</description>
+      <format>E-book</format>
+      <publication_date>2011</publication_date>
+      <isbn>9781591843082</isbn>
+      <category_specific>Business</category_specific>
+      <image_path>images/lean.jpg</image_path>
+    </book>
+    <book>
+      <title>Penulis Jalanan</title>
+      <author>Teme Abdullah</author>
+      <price>RM28.90</price>
+      <description>Penulis Jalanan membawa kita menyelami perjalanan menjadi dewasa secara spesifiknya kehidupan selepas fasa universiti, bekerja dan hidup berdikari yang berbeza. Tidak semudah dan seindah yang dibayangkan tetapi tetap bermakna jika melihat dari perspektif yang lebih luas.</description>
+      <format>Paperback</format>
+      <publication_date>2023</publication_date>
+      <isbn>9789672459682</isbn>
+      <category_specific>Memoir</category_specific>
+      <image_path>images/penulis.jpg</image_path>
+    </book>
+    <book>
+      <title>A Short History of Nearly Everything</title>
+      <author>Bill Bryson</author>
+      <price>RM13.90</price>
+      <description>A witty and engaging exploration of the universe's history, from the Big Bang to the present day.</description>
+      <format>E-book</format>
+      <publication_date>2003</publication_date>
+      <isbn>9780571220770</isbn>
+      <category_specific>Science History</category_specific>
+      <image_path>images/history.jpg</image_path>
+    </book>
+    <book>
+      <title>Surrounded by Idiots: The Four Types of Human Behaviour (or, How to Understand Those Who Cannot Be Understood)</title>
+      <author>Thomas Erikson</author>
+      <price>RM29.99</price>
+      <description>A collection of delicious and creative vegetarian recipes, replicating the flavors and textures of meat dishes.</description>
+      <format>E-book</format>
+      <publication_date>2019</publication_date>
+      <isbn>9781616089347</isbn>
+      <category_specific>Vegetarian Cuisine</category_specific>
+      <image_path>images/idiots.jpg</image_path>
+    </book>
+    <book>
+      <title>Malaysian Maverick: Mahathir Mohamad in Turbulent Times</title>
+      <author>Barry Wain</author>
+      <price>RM40.90</price>
+      <description>The autobiography of Malaysia's longest-serving Prime Minister, Tun Mahathir Mohamad, detailing his life and political career.</description>
+      <format>Hardcover</format>
+      <publication_date>2009</publication_date>
+      <isbn>9780230238732</isbn>
+      <category_specific>Malaysian Politics</category_specific>
+      <image_path>images/malaysian.jpg</image_path>
+    </book>
+    <book>
+      <title>Making Tiktok Videos</title>
+      <author>Will Eagle</author>
+      <price>RM10.99</price>
+      <description>Create videos using the tricks of TikTok stars! Making TikTok Videos reveals the secrets that TikTok celebs and influencers use to make the videos that everyone’s watching.</description>
+      <format>Paperback</format>
+      <publication_date>2023</publication_date>
+      <isbn>9781394156061</isbn>
+      <category_specific>Computing and Internet</category_specific>
+      <image_path>images/tiktok.jpg</image_path>
+    </book>
+    <book>
+      <title>Kek 5 Bahan</title>
+      <author>Suwarsi M. Arukin</author>
+      <price>RM12.90</price>
+      <description>40 aneka kek dan Bonus 10 Dessert.</description>
+      <format>Paperback</format>
+      <publication_date>2018</publication_date>
+      <isbn>9789678608459</isbn>
+      <category_specific>Food</category_specific>
+      <image_path>images/kek.jpeg</image_path>
+    </book>	
+  </Non-fiction>
+
+  <Fiction>
+    <book>
+      <title>A Game of Thrones</title>
+      <author>George R.R. Martin</author>
+      <price>RM29.99</price>
+      <description>A thrilling tale of power, betrayal, and magic in the land of Westeros.</description>
+      <format>E-book</format>
+      <publication_date>1996</publication_date>
+      <isbn>9780552140304</isbn>
+      <category_specific>Fantasy</category_specific>
+      <image_path>images/thrones.jpg</image_path>
+    </book>
+    <book>
+      <title>Pride and Prejudice</title>
+      <author>Jane Austen</author>
+      <price>RM15.90</price>
+      <description>A witty social commentary following the lives of aristocratic families in England.</description>
+      <format>E-book</format>
+      <publication_date>1813</publication_date>
+      <isbn>9780140439516</isbn>
+      <category_specific>Romance</category_specific>
+      <image_path>images/pride.jpg</image_path>
+    </book>
+    <book>
+      <title>The Lord of the Rings</title>
+      <author>J.R.R. Tolkien</author>
+      <price>RM29.99</price>
+      <description>An epic high-fantasy adventure following a hobbit's quest to destroy the One Ring.</description>
+      <format>E-book</format>
+      <publication_date>1954</publication_date>
+      <isbn>9780261102694</isbn>
+      <category_specific>Fantasy</category_specific>
+      <image_path>images/rings.jpg</image_path>
+    </book>
+    <book>
+      <title>The Hitchhiker's Guide to the Galaxy</title>
+      <author>Douglas Adams</author>
+      <price>RM9.49</price>
+      <description>A humorous science fiction adventure following an Englishman and his alien companions through space.</description>
+      <format>E-book</format>
+      <publication_date>1979</publication_date>
+      <isbn>9780345391803</isbn>
+      <category_specific>Science Fiction</category_specific>
+      <image_path>images/guide.jpg</image_path>
+    </book>
+    <book>
+      <title>Little Women</title>
+      <author>Louisa May Alcott</author>
+      <price>RM6.99</price>
+      <description>A coming-of-age story following the lives of four March sisters during the American Civil War.</description>
+      <format>E-book</format>
+      <publication_date>1868</publication_date>
+      <isbn>9781439131084</isbn>
+      <category_specific>Classic Literature</category_specific>
+      <image_path>images/little.jpg</image_path>
+    </book>
+    <book>
+      <title>And Then There Were None</title>
+      <author>Agatha Christie</author>
+      <price>RM7.99</price>
+      <description>Ten strangers are invited to a remote island, only to find themselves picked off one by one.</description>
+      <format>E-book</format>
+      <publication_date>1939</publication_date>
+      <isbn>9780007146679</isbn>
+      <category_specific>Mystery</category_specific>
+      <image_path>images/none.jpg</image_path>
+    </book>
+    <book>
+      <title>The Gift of Rain</title>
+      <author>Tan Twan Eng</author>
+      <price>RM10.90</price>
+      <description>A captivating historical novel set in colonial Malaya, following a young lawyer's journey of love, loss, and the complexities of cultural identity.</description>
+      <format>E-book</format>
+      <publication_date>2007</publication_date>
+      <isbn>9780141941832</isbn>
+      <category_specific>Historical Fiction (Malaysia)</category_specific>
+      <image_path>images/gift.jpg</image_path>
+    </book>
+    <book>
+      <title>The Accidental Malay</title>
+      <author>Karina Bahrin</author>
+      <price>RM13.99</price>
+      <description>A controversial yet thought-provoking novel exploring the complexities of identity, race, and religion in modern-day Malaysia. Jasmine Leong, a driven Chinese businesswoman, discovers she's actually Malay by birth, upending her life and challenging her cultural assumptions.</description>
+      <format>E-book</format>
+      <publication_date>2022</publication_date>
+      <isbn>9789811830704</isbn>
+      <category_specific>Social Commentary (Malaysia)</category_specific>
+      <image_path>images/accidental.jpg</image_path>
+    </book>
+    <book>
+      <title>Introvert</title>
+      <author>Abstrakim</author>
+      <price>RM20.90</price>
+      <description>Mereka kata, orang introvert selalunya perahsia dan suka memendam perasaan. Farady mengaku dia memang sukar untuk meluahkan apa yang dia rasa. Sejak kecil dia selalu merasa kesunyian dan sukar untuk mencari rakan yang boleh dia percayai.</description>
+      <format>Novel</format>
+      <publication_date>2022</publication_date>
+      <isbn>9789672328803</isbn>
+      <category_specific>Teenager Fiction</category_specific>
+      <image_path>images/introvert.jpg</image_path>
+    </book>
+    <book>
+      <title>Rojak: Bite-Sized Stories</title>
+      <author>Amir Muhammad</author>
+      <price>RM23.90</price>
+      <description>This is a collection of very short fictional stories. The taste can be sweet, juicy, spicy, tart, or crunchy! The flavours of Malaysia, in fact. So if this book could talk, it would say: "Bite Me.".</description>
+      <format>Hardcover</format>
+      <publication_date>2020</publication_date>
+      <isbn>9789675266102</isbn>
+      <category_specific>Short stories</category_specific>
+      <image_path>images/rojak.jpg</image_path>
+    </book>
+    </Fiction>
+  </Books>
+</ebookstore>
+

@@ -1,0 +1,310 @@
+.book-card {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  float: left;
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+li.topbar {
+  display: inline;
+  margin-right: 20px;
+}
+
+p.topbar {
+  max-width: 100%;
+  height: auto;
+  font-size: 20px;
+  text-align: justify;
+}
+
+
+div.centercontainer_index,
+div.centercontainer_add,
+div.centercontainer_edit {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+div.centercontainer_fiction {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #FFCCCB;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+div.centercontainer_nonfiction {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #C4A484;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: white;
+  background-repeat: repeat-y;
+  height: 100%;
+  width: 100%;
+  font-family: Verdana;
+  background-position: center;
+}
+
+header {
+  width: 100%;
+}
+
+.body_title {
+  margin-top: 150px;
+  text-align: center;
+  background-color: white;
+  font-size: 24px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+div.directory {
+  margin: auto;
+  border-top: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation_text {
+  font-family: Verdana;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-grid;
+}
+
+
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #006400;
+}
+
+
+
+li {
+  float: left;
+  color: white;
+}
+
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: black;
+}
+
+#booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#fictionBooksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#nonfictionBooksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+div#forms {
+  margin: 25px;
+  width: auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: grey;
+  font-size: 20px;
+  border-bottom: 1px;
+  color: white;
+  height: 100%;
+}
+
+
+
+
+div.add_form {
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid black;
+  opacity: 0.2;
+}
+
+div.add_form:hover {
+  opacity: 1.0;
+}
+
+div.edit_form {
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid black;
+  opacity: 0.2;
+}
+
+div.edit_form:hover {
+  opacity: 1.0;
+}
+
+
+input[type=text],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #228B22;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #FF4500;
+}
+
+
+div.bottom_footer {
+  width: 100%;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+
+
+span.text_left {
+  margin-left: 0px;
+}
+
+span.text_right {
+  margin-left: 0px;
+  float: right;
+}
+
+
+a.prev:hover {
+  cursor: pointer;
+}
+
+a.next:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* Center items horizontally */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 25%;
+  height: auto;
+  margin-right: 10px;
+}
